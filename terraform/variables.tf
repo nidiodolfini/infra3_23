@@ -23,7 +23,7 @@ variable "bloco_vpc" {
 }
 
 variable "bloco_internet" {
-  default = "10.0.0.0/16"
+  default = "0.0.0.0/0"
 }
 
 variable "vpc_id" {

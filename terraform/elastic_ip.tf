@@ -1,10 +1,18 @@
-resource "aws_eip" "webserver0" {
-  instance = aws_instance.webserver[0].id
+resource "aws_eip" "k8s1" {
+  instance = aws_instance.kubernetes[0].id
   vpc      = true
 }
 
-resource "aws_eip" "webserver1" {
-  instance = aws_instance.webserver[1].id
+resource "aws_eip" "k8s2" {
+  instance = aws_instance.kubernetes[1].id
+  vpc      = true
+}
+resource "aws_eip" "k8s3" {
+  instance = aws_instance.kubernetes[2].id
   vpc      = true
 }
 
+resource "aws_eip" "ansible" {
+  instance = aws_instance.ansibleserver.id
+  vpc      = true
+}
